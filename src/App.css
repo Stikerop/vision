@@ -66,12 +66,12 @@
     z-index: 3;
 }
 
-.grid-item-title > span {
+.grid-item-title > p {
     display: block;
     transform: translateY(30px);
     transition: transform .4s ease;
 }
 
-.grid-item-inner:hover .grid-item-title > span {
+.grid-item-inner:hover .grid-item-title > p {
     transform: translateY(0);
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import  './App.css';
 import onepic from './img/onepic.jpg';
 import twopic from './img/twopic.jpg';
 import threepic from './img/threepic.jpeg'
@@ -7,72 +7,61 @@ import fourpic from './img/fourpic.jpg'
 import fivepic from './img/fivepic.jpg'
 import sixpic from './img/sixpic.jpg'
 
+const picture = [
+    {
+        id: 'one',
+        img: onepic,
+        name: 'Оби-Ван Кеноби'
+    },
+    {
+        id: 'two',
+        img: twopic,
+        name: 'С-3РО'
+    },
+    {
+        id: 'three',
+        img: threepic,
+        name: 'R2-D2'
+    },
+    {
+        id: 'four',
+        img: fourpic,
+        name: 'Тітка Беру'
+    },
+    {
+        id: 'five',
+        img: fivepic,
+        name: 'Лея Орґана'
+    },
+    {
+        id: 'six',
+        img: sixpic,
+        name: 'Оуен Ларс'
+    },
+
+];
 
 function App() {
-  return (
-      <div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={onepic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>Оби-Ван Кеноби</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={twopic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>С-3РО</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={threepic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>R2-D2</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={fourpic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>Тітка Беру</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={fivepic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>Лея Орґана</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="gallery-grid">
-          <div className="grid-item">
-            <div className="grid-item-inner">
-              <img src={sixpic} alt="картинка" className="grid-item-img"/>
-              <div className="grid-item-title">
-                <span>Оуен Ларс</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  );
+
+    const result = picture.map((item) => {
+        return <p key={item.id}>
+            <img src={item.img} alt=''/>
+            {item.name}
+        </p>
+    });
+
+    return <div>
+    {/*<div className="gallery-grid">*/}
+    {/*        <div className="grid-item">*/}
+    {/*            <div className="grid-item-inner">*/}
+                    {result}
+
+    {/*            </div>*/}
+    {/*        </div>*/}
+    {/*    </div>*/}
+    </div>
 }
 
 export default App;
+
+
